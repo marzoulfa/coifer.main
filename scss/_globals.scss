@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import 'variables';
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+
+*::before, *::after{
+    box-shadow: border-box;
+}
+
+body{
+    background: $bg-darkGray;
+    color: $body-color;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1,h2,h3{
+   color: $primary-color;
+   line-height: 2.7rem;
+   letter-spacing: 2px;
+   font-weight: 600;
+   margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    line-height: 1.7rem;
+}
+
+h2{
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+
+p{
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.container{
+    max-width: 1300px;
+    padding: 1.2rem 2.5rem;
+}
+
+// section{
+//     height: 100vh;
+// }
+
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin btn {
+    padding: 0.8rem 2rem;
+    border-radius: 1.3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}

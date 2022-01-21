@@ -1,0 +1,132 @@
+.header{
+
+    padding-top: 0.8rem;
+    nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    
+  
+   .logo{
+    
+       span{
+        font-family: 'El Messiri', sans-serif;
+      
+        display: inline-block;
+           color: $primary-color;
+           font-size: 1.5rem;
+           .specail{
+               color: #fff;
+              
+              
+           }
+        }
+    }
+
+    .collapse{
+        position: relative;
+        z-index: 999;
+       
+        &.open{
+           
+            span
+            {
+                transition: transform 300ms ease-in-out;
+                transform-origin: 6px 1px;
+                &:nth-child(1)
+                {
+                    // display: none;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                  display: none;
+                }
+                &:nth-child(3){
+                    transform: rotate(-45deg);
+                }
+               
+            }
+           
+        }
+        span{
+            display:block;
+            width: 26px;
+            height: 3px;
+            display: block;
+            cursor: pointer;
+            background-color: $primary-color;
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+          
+        }
+      
+         
+         @media screen and (min-width: 1024px) {
+            &{
+                display: none;
+            }
+        }
+    }
+
+    .nav-meun
+    {
+    display: none;
+    margin-top: 0.3rem;
+     &.collapse-menu{
+         display: block;
+        position: absolute;
+        padding-top: 10px;
+        padding-left: 40px;
+        top: 80px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 1.0);
+     }
+        ul{
+            list-style: none;
+
+            li{
+
+                a{
+                    text-decoration: none;
+                    display: block;
+                    color: $body-color ;
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                    font-weight: normal;
+                    opacity: 1;
+                    transition: opacity 300ms ease-in-out;
+                    &:hover{
+                        opacity: 1;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            &{
+                display: block;
+                position: static;
+                background-color: unset;
+            }
+            li{
+                display: inline-block;
+                a{
+                    font-size: 1.5rem;
+                }
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+            }
+
+            
+        }
+
+    }
+}
+    }
+

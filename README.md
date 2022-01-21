@@ -1,1 +1,2 @@
-# coifer.main
+# Hairdresser
+Landing page for hairdresser website

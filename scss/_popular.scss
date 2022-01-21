@@ -1,0 +1,75 @@
+.popular{
+    
+    border-top-left-radius: 20%;
+    padding: 2rem 0;
+    background-color: $bg-dark;
+    text-align: center;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 0 auto;
+
+    
+        .gallary{
+            overflow: hidden;
+            position: relative;
+          
+           
+
+            &:hover:before{
+                content: "Book Now";
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.719);
+                z-index: 1;
+                cursor: pointer;
+            }
+        }
+
+        img{
+           
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            
+            
+         
+        }
+    }
+    
+   
+}
+
+    @media screen and (min-width: 800px) {
+
+        .popular__content{
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    .gallary{
+        flex: 0 0 40%;
+        
+    }
+
+}
+
+@media screen and(min-width: 1024px) {
+    .gallary{
+        flex: 0 0 20%;
+        
+    }
+
+}
